@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #f9f5ed;
+}
+
+header {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+}
+
+header .drawer-button {
+    padding: 8px;
+    margin-right: 16px;
+    font-weight: bold;
+    color: #141e16;
+    background-color: transparent;
+    border: 0;
+    display: none;
+    cursor: pointer;
+}
+
+header img {
+    margin-right: 32px;
+}
+
+header nav ul li {
+    list-style: none;
+    /**/
+    display: inline;
+}
+
+main {
+    padding: 16px 24px;
+    display: flex;
+    /**/
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+main .content {
+    padding: 16px;
+}
+
+main .content h1 {
+    font-weight: bold;
+    /**/
+    font-size: 64px;
+}
+
+main .content p {
+    font-size: 18px;
+    margin-top: 32px;
+}
+
+main .content button {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #3b855b;
+    padding: 12px 16px;
+    border: 0;
+    border-radius: 4px;
+    margin-top: 64px;
+    cursor: pointer;
+}
+
+main .hero-image {
+    padding: 16px;
+}
+
+main .hero-image img {
+    width: 100%;
+}
+
+/**/
+header nav ul li a {
+    display: inline-block;
+    padding: 16px;
+    color: #141e16;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    header .drawer-button {
+        display: block;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: white;
+        min-height: 100vh;
+        width: 200px;
+        box-shadow: 4px 3px 15px -3px rgb(0 0 0 / 10%);
+        transform: translateX(-210px);
+        transition: transform 0.3s ease-out;
+    }
+
+    header nav ul li,
+    header nav ul li a {
+        display: block;
+    }
+
+    header nav ul li a {
+        padding: 16px 24px;
+        text-decoration: none;
+        color: #141e16;
+        font-weight: bold;
+        transition: color 0.3s ease-out;
+    }
+
+    .nav-open {
+        transform: translateX(0);
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    main .content h1 {
+        font-size: 48px;
+    }
+}
